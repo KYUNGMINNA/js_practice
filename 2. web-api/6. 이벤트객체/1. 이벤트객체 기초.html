@@ -18,7 +18,11 @@
             const $msg = document.querySelector('.msg');
             $msg.textContent = `x: ${e.x}, y: ${e.y}`;
         };
-
+        //디스트럭쳐링 방식 
+        document.onclick = function({x,y}) {
+            const $msg = document.querySelector('.msg');
+            $msg.textContent = `x: ${x}, y: ${y}`;
+        };
     </script>
 
 </body>
