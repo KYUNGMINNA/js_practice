@@ -24,7 +24,7 @@ const c = (function() {
     return {
         increase: () => ++num,
         decrease: () => --num
-    };
+    }; //객체로 리턴 -- 값에는 타입 제한 없음 (함수,문자,숫자....)
 })();
 
 console.log(c.increase());
@@ -50,10 +50,15 @@ console.log(c.increase()); // 2
 const counter = (function() {
     let num = 0;
 
-    function def(callback) {
-        return callback(num);
-    }
-    return def;
+    // function def(callback) {
+    //     return callback(num);
+    // }
+    // return def;
+
+    return (callback)=>callback(num);
+
+
+
 })();
 
 
